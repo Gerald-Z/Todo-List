@@ -60,7 +60,7 @@ describe('Basic Tests ', () => {
 
   })
 
-  it('Tests the clear function', () => {
+  it('Tests the clearList function', () => {
     cy.visit('https://gerald-z.github.io/Todo-List')
 
     cy.get('#inputText').type("Note 1");

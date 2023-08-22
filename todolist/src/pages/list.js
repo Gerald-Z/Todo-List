@@ -5,18 +5,7 @@ import { useState } from 'react';
 import Input from './input.js';
 import './list.css'
 
-
 export default function List() {
-   /* constructor(props) {
-        super(props);
-        this.state = {
-            entries: ["mess"],
-            occurrence: 0
-        }
-        this.addEntry = this.addEntry.bind(this); 
-    }
-
-    */
     const [entries, setEntries] = useState([]);
 
     function clearList(e) {
@@ -55,7 +44,6 @@ export default function List() {
         setEntries(lst);
     }
 
-
     return (
         <>
             <h1 className="description">To Do List</h1>
@@ -66,9 +54,4 @@ export default function List() {
             <div className="center clearContainer"><button id="clearList" onClick={clearList}>Clear List</button></div>
         </>
     )
-    
-
-
 }
-
-

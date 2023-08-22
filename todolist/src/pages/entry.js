@@ -32,7 +32,6 @@ export default class Entry extends React.Component {
     }
 
 
-
     render () {
         return (
             <div className='center'> 

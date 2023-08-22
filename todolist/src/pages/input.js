@@ -1,15 +1,11 @@
 import React from 'react';
 
-
-
-
 const Input = (props) => {
     const inputRef = React.useRef(null);
     let string;
 
     function localHandleChange(e) {
         e.preventDefault();
-       // console.log("The string was", string);
        if (typeof string === 'undefined') {
        } else {
             props.handleChange([...props.list, string]);
@@ -32,4 +28,3 @@ const Input = (props) => {
 } 
 
 export default Input;
-// inputRef.current.value
