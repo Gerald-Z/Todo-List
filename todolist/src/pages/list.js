@@ -28,7 +28,7 @@ export default function List() {
         let count = 0;
         setEntries(entries.filter(function(entry) {
             if (entry === string) {
-                if (count == 0) {
+                if (count === 0) {
                     count = 1;
                     return false;
                 }
@@ -37,13 +37,30 @@ export default function List() {
         }))
     }
 
+    function modifyEntry(newText, oldText) {
+        let count = 0;
+        let lst = [];
+        for(let i = 0; i < entries.length; i++) {
+            if (entries[i] === oldText) {
+                if (count === 0) {
+                    lst.push(newText);
+                    count++;
+                } else {
+                    lst.push(entries[i]);
+                }
+            } else {
+                lst.push(entries[i]);
+            }
+        }
+        setEntries(lst);
+    }
 
 
     return (
         <>
             <Input list={entries} handleChange={setEntries} />
             {entries.map(function(entry){
-                return <Entry content={entry} remove={removeEntry} />
+                return <Entry content={entry} remove={removeEntry} modify={modifyEntry}/>
             })}
             <div className="center clearContainer"><button id="clearList" onClick={clearList}>Clear List</button></div>
         </>

@@ -27,6 +27,7 @@ export default class Entry extends React.Component {
         e.preventDefault();
         this.EditRef.current.style = "z-index: -1";
         this.EditSubmitRef.current.style = "z-index: -1";
+        this.props.modify(this.EditRef.current.value, this.TextRef.current.innerText);
         this.TextRef.current.innerText=this.EditRef.current.value;
     }
 
