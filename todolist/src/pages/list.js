@@ -58,6 +58,7 @@ export default function List() {
 
     return (
         <>
+            <h1 className="description">To Do List</h1>
             <Input list={entries} handleChange={setEntries} />
             {entries.map(function(entry){
                 return <Entry content={entry} remove={removeEntry} modify={modifyEntry}/>
