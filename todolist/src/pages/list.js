@@ -25,8 +25,16 @@ export default function List() {
     }
 
     function removeEntry(string) {
-        setEntries(entries.filter((entry) => entry !== string));
-
+        let count = 0;
+        setEntries(entries.filter(function(entry) {
+            if (entry === string) {
+                if (count == 0) {
+                    count = 1;
+                    return false;
+                }
+            }
+            return true;
+        }))
     }
 
 
