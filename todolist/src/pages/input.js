@@ -10,7 +10,10 @@ const Input = (props) => {
     function localHandleChange(e) {
         e.preventDefault();
        // console.log("The string was", string);
-        props.handleChange([...props.list, string]);
+       if (typeof string === 'undefined') {
+       } else {
+            props.handleChange([...props.list, string]);
+       }
         inputRef.current.value = '';
     }
 
