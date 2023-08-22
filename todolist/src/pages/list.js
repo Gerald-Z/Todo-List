@@ -24,11 +24,18 @@ export default function List() {
         setEntries([]);
     }
 
+    function removeEntry(string) {
+        setEntries(entries.filter((entry) => entry !== string));
+
+    }
+
+
+
     return (
         <>
             <Input list={entries} handleChange={setEntries} />
             {entries.map(function(entry){
-                return <Entry content={entry} />
+                return <Entry content={entry} remove={removeEntry} />
             })}
             <div className="center clearContainer"><button id="clearList" onClick={clearList}>Clear List</button></div>
         </>
