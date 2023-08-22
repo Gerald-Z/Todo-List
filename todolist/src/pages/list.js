@@ -17,7 +17,7 @@ export default function List() {
     }
 
     */
-    const [entries, setEntries] = useState(["mess"]);
+    const [entries, setEntries] = useState([]);
 
     function clearList(e) {
         e.preventDefault();
