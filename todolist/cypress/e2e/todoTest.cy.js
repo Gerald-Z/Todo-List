@@ -79,5 +79,25 @@ describe('Basic Tests ', () => {
     cy.get('#clearList').click();
   })
 
+  it('Tests deleting entries individually', () => {
+    cy.visit('https://gerald-z.github.io/Todo-List')
+
+    cy.get('#inputText').type("Note 1");
+    cy.get('#inputSubmit').click()
+
+    cy.get('#inputText').type("Note 2");
+    cy.get('#inputSubmit').click()
+    
+    cy.get('#inputText').type("Note 3");
+    cy.get('#inputSubmit').click()    
+
+    cy.get(':nth-child(3) > .entryText').should('contain', "Note 1");
+    cy.get(':nth-child(4) > .entryText').should('contain', "Note 2");
+    cy.get(':nth-child(5) > .entryText').should('contain', "Note 3");
+
+    cy.get(':nth-child(3) > .remove').click();
+    cy.get(':nth-child(3) > .remove').click();
+    cy.get(':nth-child(3) > .remove').click();
+  })
 })
 
