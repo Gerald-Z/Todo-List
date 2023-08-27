@@ -45,13 +45,16 @@ export default function List() {
     }
 
     return (
-        <>
+        <div className="container">
+            <div className="space"></div>
             <h1 className="description">To Do List</h1>
             <Input list={entries} handleChange={setEntries} />
             {entries.map(function(entry){
                 return <Entry content={entry} remove={removeEntry} modify={modifyEntry}/>
             })}
             <div className="center clearContainer"><button id="clearList" onClick={clearList}>Clear List</button></div>
-        </>
+            <div className="space"></div>
+        </div>
     )
 }
+

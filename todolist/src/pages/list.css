@@ -6,8 +6,6 @@ body {
     background-color: rgb(171, 181, 238);
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    height: 5vh;
     text-align: center;
     display: grid;
     grid-template-columns: 70% 15% 15%;
@@ -16,7 +14,6 @@ body {
 
 .clearContainer, .inputContainer {
     margin-top: 5%;
-    margin-bottom: 5%;
     border-radius: 20px;
 }
 
@@ -83,4 +80,42 @@ body {
 
 .description {
     text-align: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.clearContainer {
+    margin-bottom: 5%;
+}
+
+
+@media only screen and (min-width: 1001px) {
+  .container {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .center {
+    width: 50%;
+    height: 5vh;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+  .center {
+    width: 90%;
+    height: 15vh;
+  }
+}
+
+
+.space {
+    margin-top: 5%;
+    height: 0.5vh;
 }
