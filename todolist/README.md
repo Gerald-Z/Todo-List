@@ -1,3 +1,40 @@
+# To-Do List App
+
+## Description: 
+The application allows the user to read and modify a list of items, with modifications including creating new items, editing existing items, and deleting individual items or the entire list.
+
+The app was created by [Create React App] and involves a lot of React.js and React Components, in addition to HTML and CSS.
+
+After hosting the app on GitHub Pages, I performed E2E testing on the app using Cypress. 
+
+
+## Some Challenges I encountered: 
+
+One of the difficulties I came across when working on this project was the fact that I could no longer reference the value of an HTML element in JSX as easily as I could with HTML script. 
+This required me to learn more about React references and incorporate them into my JSX code. 
+
+Another issue I encountered, and one that I have been unable to solve up until now, is the fact that after an item had been created and edited, attempting to delete the item will result in a different
+item being deleted. In addition, after that is done, the edited item will not be deleted unless I clear the entire list. During my attempts to fix the bug, I noticed that the list I use to keep track 
+of the items in the list is edited and deleted as intended during this process, and even the rendering process was done correctly. However, somehow, the list displayed was simply incorrect. After spending
+multiple hours attempting to handle this bug, I decided to move on to other projects and return to this issue when I have time. 
+
+
+## Plans for the future: 
+
+I intend to return to this project and handle the bug mentioned in the second paragraph above when I have time. 
+
+
+The app can be accessed with the following link: 
+https://gerald-z.github.io/Todo-List/ 
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
